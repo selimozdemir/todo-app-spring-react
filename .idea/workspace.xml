@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="639dc13c-f3f3-49e7-a0af-5ffa26c937c7" name="Default" comment="First stage">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/config/liquibase/changelog/20181020191250_added_alter_entity_Task.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config/liquibase/master.xml" afterPath="$PROJECT_DIR$/src/main/resources/config/liquibase/master.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todo-list-app.iml" afterPath="$PROJECT_DIR$/todo-list-app.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.yo-rc.json" afterPath="$PROJECT_DIR$/.yo-rc.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config/application-heroku.yml" afterPath="$PROJECT_DIR$/src/main/resources/config/application-heroku.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config/application-prod.yml" afterPath="$PROJECT_DIR$/src/main/resources/config/application-prod.yml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,7 +52,9 @@
             <state relative-caret-position="525">
               <caret line="35" column="5" lean-forward="false" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
               <folding>
-                <marker date="1540059517012" expanded="true" signature="1154:1260" ph="[...]" />
+                <marker date="1540061596997" expanded="true" signature="0:1263" ph="{...}" />
+                <marker date="1540061596997" expanded="true" signature="26:1208" ph="{&quot;jhipsterVersion&quot;: &quot;5.5.0&quot;...}" />
+                <marker date="1540061596997" expanded="true" signature="1154:1208" ph="[...]" />
               </folding>
             </state>
           </provider>
@@ -79,11 +80,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="master.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="master.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/config/liquibase/master.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
               <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application-prod.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/config/application-prod.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="367">
+              <caret line="59" column="26" lean-forward="false" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -176,7 +187,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/app/entities/task/task.reducer.ts" />
         <option value="$PROJECT_DIR$/src/main/resources/config/bootstrap-heroku.yml" />
         <option value="$PROJECT_DIR$/src/main/java/com/selimozdemir/todolistapp/web/rest/errors/ErrorConstants.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/config/application-prod.yml" />
         <option value="$PROJECT_DIR$/src/main/webapp/i18n/en/task.json" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/entities/task/task-complete-dialog.tsx" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/modules/home/home.tsx" />
@@ -199,6 +209,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/i18n/en/global.json" />
         <option value="$PROJECT_DIR$/.yo-rc.json" />
         <option value="$PROJECT_DIR$/src/main/resources/config/liquibase/master.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/config/application-prod.yml" />
       </list>
     </option>
   </component>
@@ -541,7 +552,7 @@
       <workItem from="1539902294150" duration="53727000" />
       <workItem from="1540056472607" duration="815000" />
       <workItem from="1540057411974" duration="589000" />
-      <workItem from="1540058020635" duration="2470000" />
+      <workItem from="1540058020635" duration="3364000" />
     </task>
     <task id="LOCAL-00001" summary="First stage">
       <created>1540054510083</created>
@@ -573,10 +584,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69086000" />
+    <option name="totallyTimeSpent" value="69980000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="260" y="20" width="1920" height="1037" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.77740866" sideWeight="0.50426894" order="7" side_tool="true" content_ui="tabs" />
@@ -600,7 +612,7 @@
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890365" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.77740866" sideWeight="0.49573106" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890365" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31696904" sideWeight="0.49339935" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31696904" sideWeight="0.49339935" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21024546" sideWeight="0.5066007" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -665,7 +677,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/@fortawesome/fontawesome-svg-core/index.d.ts" />
     <entry file="file://$PROJECT_DIR$/node_modules/@fortawesome/react-fontawesome/index.d.ts" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/home/home.tsx" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/favicon.ico" />
@@ -757,7 +768,9 @@
         <state relative-caret-position="525">
           <caret line="35" column="5" lean-forward="false" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
           <folding>
-            <marker date="1540059517012" expanded="true" signature="1154:1260" ph="[...]" />
+            <marker date="1540061596997" expanded="true" signature="0:1263" ph="{...}" />
+            <marker date="1540061596997" expanded="true" signature="26:1208" ph="{&quot;jhipsterVersion&quot;: &quot;5.5.0&quot;...}" />
+            <marker date="1540061596997" expanded="true" signature="1154:1208" ph="[...]" />
           </folding>
         </state>
       </provider>
@@ -782,6 +795,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config/application-prod.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="59" column="26" lean-forward="false" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
           <folding />
         </state>
       </provider>

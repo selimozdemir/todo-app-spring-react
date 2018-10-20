@@ -34,7 +34,7 @@
       "en",
       "tr"
     ],
-    "herokuAppName": "sleepy-plateau-56064",
+    "herokuAppName": "todo-list-spring",
     "herokuDeployType": "git"
   }
 }
