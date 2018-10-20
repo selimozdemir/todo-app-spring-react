@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="639dc13c-f3f3-49e7-a0af-5ffa26c937c7" name="Default" comment="First stage">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config/application-prod.yml" afterPath="$PROJECT_DIR$/src/main/resources/config/application-prod.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,36 +29,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="activationEmail.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/mail/activationEmail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-              <folding>
-                <marker date="1540057954561" expanded="true" signature="96:118" ph="TodoListApp account activation" />
-                <marker date="1540057954561" expanded="true" signature="347:372" ph="Dear {0}" />
-                <marker date="1540057954561" expanded="true" signature="443:465" ph="Your TodoListApp account has been created, please click on the URL below to activate it:" />
-                <marker date="1540057954561" expanded="true" signature="796:818" ph="Regards," />
-                <marker date="1540057954561" expanded="true" signature="883:898" ph="TodoListApp Team." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".yo-rc.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.yo-rc.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" column="5" lean-forward="false" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-              <folding>
-                <marker date="1540062091905" expanded="true" signature="0:1262" ph="{...}" />
-                <marker date="1540062091905" expanded="true" signature="26:1208" ph="{&quot;jhipsterVersion&quot;: &quot;5.5.0&quot;...}" />
-                <marker date="1540062091905" expanded="true" signature="1154:1208" ph="[...]" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="package-lock.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package-lock.json">
           <provider selected="true" editor-type-id="text-editor">
@@ -71,8 +42,8 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="301">
+              <caret line="65" column="11" lean-forward="false" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -88,11 +59,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application-prod.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="application-prod.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/config/application-prod.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="57" column="17" lean-forward="false" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
+            <state relative-caret-position="355">
+              <caret line="119" column="35" lean-forward="false" selection-start-line="119" selection-start-column="26" selection-end-line="119" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="generator-base.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/node_modules/generator-jhipster/generators/generator-base.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="283">
+              <caret line="129" column="37" lean-forward="false" selection-start-line="129" selection-start-column="29" selection-end-line="129" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -164,7 +155,13 @@
       <find>\/\*([\S\s]+?)\*\/</find>
       <find>admin</find>
       <find>User (login=\&quot;user\&quot; and password=\&quot;user</find>
+      <find>my-server-url-to-change</find>
+      <find>jhipster-needle-add-resources-to-root</find>
+      <find>genera</find>
     </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/node_modules</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -209,7 +206,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/app/entities/task/task-complete-dialog.tsx" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/modules/home/home.tsx" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/css/loading.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/selimozdemir/todolistapp/service/TaskService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/selimozdemir/todolistapp/web/rest/TaskResource.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/entities/task/task-detail.tsx" />
@@ -228,6 +224,8 @@
         <option value="$PROJECT_DIR$/.yo-rc.json" />
         <option value="$PROJECT_DIR$/src/main/resources/config/liquibase/master.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/config/application-prod.yml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
+        <option value="$PROJECT_DIR$/node_modules/generator-jhipster/generators/generator-base.js" />
       </list>
     </option>
   </component>
@@ -384,7 +382,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/node_modules" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -570,7 +568,7 @@
       <workItem from="1539902294150" duration="53727000" />
       <workItem from="1540056472607" duration="815000" />
       <workItem from="1540057411974" duration="589000" />
-      <workItem from="1540058020635" duration="3922000" />
+      <workItem from="1540058020635" duration="4747000" />
     </task>
     <task id="LOCAL-00001" summary="First stage">
       <created>1540054510083</created>
@@ -602,7 +600,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70538000" />
+    <option name="totallyTimeSpent" value="71363000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="260" y="20" width="1920" height="1037" extended-state="6" />
@@ -695,7 +693,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/app.scss" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/static/images/logo-jhipster.png" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/static/images/hipster.png" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/static/images/hipster2x.png" />
@@ -704,7 +701,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/static/css/loading.css" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/manifest.webapp" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/robots.txt" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html" />
     <entry file="file://$PROJECT_DIR$/Procfile" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/app/entities/task/task-detail.tsx" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/app/config/constants.ts" />
@@ -782,22 +778,14 @@
         <state relative-caret-position="525">
           <caret line="35" column="5" lean-forward="false" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
           <folding>
-            <marker date="1540062091905" expanded="true" signature="0:1262" ph="{...}" />
-            <marker date="1540062091905" expanded="true" signature="26:1208" ph="{&quot;jhipsterVersion&quot;: &quot;5.5.0&quot;...}" />
-            <marker date="1540062091905" expanded="true" signature="1154:1208" ph="[...]" />
+            <marker date="1540062646686" expanded="true" signature="0:1262" ph="{...}" />
+            <marker date="1540062646686" expanded="true" signature="26:1208" ph="{&quot;jhipsterVersion&quot;: &quot;5.5.0&quot;...}" />
+            <marker date="1540062646686" expanded="true" signature="1154:1208" ph="[...]" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -847,8 +835,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/config/application-prod.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="57" column="17" lean-forward="false" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
+        <state relative-caret-position="355">
+          <caret line="119" column="35" lean-forward="false" selection-start-line="119" selection-start-column="26" selection-end-line="119" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="65" column="11" lean-forward="false" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/generator-jhipster/generators/generator-base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="129" column="37" lean-forward="false" selection-start-line="129" selection-start-column="29" selection-end-line="129" selection-end-column="37" />
           <folding />
         </state>
       </provider>
