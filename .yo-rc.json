@@ -1,0 +1,40 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.selimozdemir.todolistapp",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "5.5.0",
+    "applicationType": "monolith",
+    "baseName": "TodoListApp",
+    "packageName": "com.selimozdemir.todolistapp",
+    "packageFolder": "com/selimozdemir/todolistapp",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "elasticsearch",
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MjE4YjI0MDliYTZlZTliODA4M2VhZDcxMjUwNjM3M2EzMTQzYzIyYjdjYjEzZjY2OTQyNGJlZmIzMGU5NDgwMThjYWFjODQwMTYzZjBmMGU4Y2JhNTdlNTA5YzQzNmFkM2RlYTUwN2ViNjJlNzU4YTJkMDc2MWVmOTA4MWFmNGI=",
+    "clientFramework": "react",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": [
+      "en",
+      "tr"
+    ],
+    "herokuAppName": "sleepy-plateau-56064",
+    "herokuDeployType": "git"
+  }
+}

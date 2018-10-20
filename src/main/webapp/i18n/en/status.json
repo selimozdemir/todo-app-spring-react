@@ -1,0 +1,10 @@
+{
+    "todoListApp": {
+        "Status" : {
+            "null": "",
+            "INPROGRESS": "INPROGRESS",
+            "COMPLETED": "COMPLETED",
+            "EXPIRED": "EXPIRED"
+        }
+    }
+}
