@@ -55,9 +55,11 @@ spring:
         contexts: prod
     mail:
         host: smtp.mailgun.org
-        port: 2525
+        port: 587
         username: test@mg.xenforo.web.tr
         password: 6n1XJ3z1
+        properties.mail.smtp.auth: true
+        properties.mail.smtp.starttls.enable: true
     thymeleaf:
         cache: true
 
