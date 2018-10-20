@@ -113,7 +113,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "50f3070be030f7e26be6";
+/******/ 	var hotCurrentHash = "938dd173a824f4d04dce";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -1299,6 +1299,40 @@ webpackContext.keys = function webpackContextKeys() {
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
 webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
+
+/***/ }),
+
+/***/ "./node_modules/webpack/hot sync ^\\.\\/log$":
+/*!*************************************************!*\
+  !*** (webpack)/hot sync nonrecursive ^\.\/log$ ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./log": "./node_modules/webpack/hot/log.js"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) { // check for number or string
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return id;
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./node_modules/webpack/hot sync ^\\.\\/log$";
 
 /***/ }),
 
@@ -5579,7 +5613,7 @@ var setLocale = function (locale) { return function (dispatch) { return tslib__W
         switch (_a.label) {
             case 0:
                 if (!!Object.keys(react_jhipster__WEBPACK_IMPORTED_MODULE_2__["TranslatorContext"].context.translations).includes(locale)) return [3 /*break*/, 2];
-                return [4 /*yield*/, axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("i18n/" + locale + ".json?buildTimestamp=" + '1540058912350')];
+                return [4 /*yield*/, axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("i18n/" + locale + ".json?buildTimestamp=" + '1540066015696')];
             case 1:
                 response = _a.sent();
                 react_jhipster__WEBPACK_IMPORTED_MODULE_2__["TranslatorContext"].registerTranslations(locale, response.data);
@@ -5684,12 +5718,14 @@ var ITEMS_PER_PAGE = 20;
 /***/ }),
 
 /***/ 0:
-/*!****************************************************************!*\
-  !*** multi react-hot-loader/patch ./src/main/webapp/app/index ***!
-  \****************************************************************/
+/*!**********************************************************************************************************************************************!*\
+  !*** multi (webpack)-dev-server/client?http://localhost:9060 (webpack)/hot/dev-server.js react-hot-loader/patch ./src/main/webapp/app/index ***!
+  \**********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(/*! /home/selim/jhipsdev/node_modules/webpack-dev-server/client/index.js?http://localhost:9060 */"./node_modules/webpack-dev-server/client/index.js?http://localhost:9060");
+__webpack_require__(/*! /home/selim/jhipsdev/node_modules/webpack/hot/dev-server.js */"./node_modules/webpack/hot/dev-server.js");
 __webpack_require__(/*! react-hot-loader/patch */"./node_modules/react-hot-loader/patch.js");
 module.exports = __webpack_require__(/*! ./src/main/webapp/app/index */"./src/main/webapp/app/index.tsx");
 

@@ -55,9 +55,11 @@ spring:
         contexts: prod
     mail:
         host: smtp.mailgun.org
-        port: 2525
-        username: postmaster@mg.xenforo.web.tr
-        password: 18eeafe8ba70ed672d6bddb7a805ea55
+        port: 587
+        username: test@mg.xenforo.web.tr
+        password: 6n1XJ3z1
+        properties.mail.smtp.auth: true
+        properties.mail.smtp.starttls.enable: true
     thymeleaf:
         cache: true
 
@@ -116,7 +118,7 @@ jhipster:
                 token-validity-in-seconds-for-remember-me: 2592000
     mail: # specific JHipster mail property, for standard properties see MailProperties
         from: TodoListApp@localhost
-        base-url: http://my-server-url-to-change # Modify according to your server's URL
+        base-url: https://todo-list-spring.herokuapp.com # Modify according to your server's URL
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
         jmx:
             enabled: true
