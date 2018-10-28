@@ -4,9 +4,9 @@ Basically, you can create, delete, edit, search and sort the task list according
 
 ## Briefly
 
-    1. [Download][]
+You can [Download][] and run the Prebuilt war file as follows:
 
-    2. java -jar todo-list-app-0.0.1-SNAPSHOT.war
+    java -jar todo-list-app-0.0.1-SNAPSHOT.war
 
 ## Development
 
