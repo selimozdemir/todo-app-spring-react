@@ -2,8 +2,11 @@
 This application is developed with spring rest framework and react.
 Basically, you can create, delete, edit, search and sort the task list according to the criteria you specify.
 
-## Introduction
+## Briefly
 
+    1. [Download][]
+
+    2. java -jar todo-list-app-0.0.1-SNAPSHOT.war
 
 ## Development
 
@@ -128,7 +131,7 @@ Then run:
 
     docker-compose -f src/main/docker/app.yml up -d
     
-
+[Download]: https://github.com/selimozdemir/todo-app-spring-react/blob/master/prebuilt/dev/todo-list-app-0.0.1-SNAPSHOT.war
 [Node.js]: https://nodejs.org/
 [Yarn]: https://yarnpkg.org/
 [Webpack]: https://webpack.github.io/
