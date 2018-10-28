@@ -1,3 +1,5 @@
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 # TodoListApp
 This application is developed with spring rest framework, elastic search, hibernate, react & redux libraries.
 Basically, you can create dependent tasks, delete, edit, search and sort the task list according to the criteria you specify.
