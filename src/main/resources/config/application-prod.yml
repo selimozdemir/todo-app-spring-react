@@ -3,8 +3,8 @@
 #
 # This configuration overrides the application.yml file.
 #
-# More information on profiles: https://www.jhipster.tech/profiles/
-# More information on configuration properties: https://www.jhipster.tech/common-application-properties/
+# More information on profiles: /profiles/
+# More information on configuration properties: /common-application-properties/
 # ===================================================================
 
 # ===================================================================
@@ -92,7 +92,7 @@ server:
 # ===================================================================
 # JHipster specific properties
 #
-# Full reference is available at: https://www.jhipster.tech/common-application-properties/
+# Full reference is available at: /common-application-properties/
 # ===================================================================
 
 jhipster:
@@ -140,7 +140,7 @@ jhipster:
 # to have type-safe configuration, like in the JHipsterProperties above
 #
 # More documentation is available at:
-# https://www.jhipster.tech/common-application-properties/
+# /common-application-properties/
 # ===================================================================
 
 # application:

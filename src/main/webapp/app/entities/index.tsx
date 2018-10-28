@@ -5,14 +5,14 @@ import { Switch } from 'react-router-dom';
 import ErrorBoundaryRoute from 'app/shared/error/error-boundary-route';
 
 import Task from './task';
-/* jhipster-needle-add-route-import - JHipster will add routes here */
+/* needle-add-route-import -  add routes here */
 
 const Routes = ({ match }) => (
   <div>
     <Switch>
       {/* prettier-ignore */}
       <ErrorBoundaryRoute path={`${match.url}/task`} component={Task} />
-      {/* jhipster-needle-add-route-path - JHipster will routes here */}
+      {/* needle-add-route-path -  routes here */}
     </Switch>
   </div>
 );

@@ -3,28 +3,32 @@
     "todoListApp": {
         "task" : {
             "home": {
-                "title": "Tasks",
-                "createLabel": "Create a new Task",
-                "createOrEditLabel": "Create or edit a Task",
-                "search": "Search for Task"
+                "title": "Görevler",
+                "createLabel": "Yeni bir görev oluştur",
+                "createOrEditLabel": "Görev oluştur veya düzenle",
+                "search": "Görevlerde ara"
             },
-            "created": "A new Task is created with identifier {{ param }}",
-            "updated": "A Task is updated with identifier {{ param }}",
-            "deleted": "A Task is deleted with identifier {{ param }}",
+            "created": "{{ param }} ile yeni bir görev oluşturuldu",
+            "updated": "{{ param }} görevi güncellendi",
+            "deleted": "{{ param }} görevi silindi",
             "delete": {
-                "question": "Are you sure you want to delete Task {{ id }}?"
+                "question": "{{ id }} görevini silmek istediğinizden emin misiniz? Bağlı görevler varsa onlarda silinecektir."
+            },
+            "completed": "Görev tamamlandı {{ param }}",
+            "complete": {
+                "question" : "{{ id }} görevini tamamlamak istediğinizden emin misiniz? Tamamlanmamış bağlı görevler varsa işlem gerçekleşmeyecektir."
             },
             "detail": {
-                "title": "Task"
+                "title": "Görev"
             },
-            "name": "Name",
-            "description": "Description",
-            "createDate": "Create Date",
-            "deadline": "Deadline",
-            "status": "Status",
-            "user": "User",
-            "task": "Task",
-            "parent": "Parent"
+            "name": "Adı",
+            "description": "Açıklama",
+            "createDate": "Oluşturma Tarihi",
+            "deadline": "Sonlanma Tarihi",
+            "status": "Durumu",
+            "user": "Kullanıcı",
+            "task": "Üst Görev",
+            "parent": "Ebeveyn"
         }
     }
 }

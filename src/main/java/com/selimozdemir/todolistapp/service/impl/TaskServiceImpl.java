@@ -18,9 +18,7 @@ import java.util.*;
 
 import static org.elasticsearch.index.query.QueryBuilders.*;
 
-/**
- * Service Implementation for managing Task.
- */
+
 @Service
 @Transactional
 public class TaskServiceImpl implements TaskService {
@@ -39,12 +37,7 @@ public class TaskServiceImpl implements TaskService {
         this.em = em;
     }
 
-    /**
-     * Save a task.
-     *
-     * @param task the entity to save
-     * @return the persisted entity
-     */
+
     @Override
     public Task save(Task task) {
         log.debug("Request to save Task : {}", task);
@@ -53,12 +46,7 @@ public class TaskServiceImpl implements TaskService {
         return result;
     }
 
-    /**
-     * Get all the tasks.
-     *
-     * @param pageable the pagination information
-     * @return the list of entities
-     */
+
     @Override
     @Transactional(readOnly = true)
     public Page<Task> findAll(Pageable pageable) {
@@ -67,12 +55,7 @@ public class TaskServiceImpl implements TaskService {
     }
 
 
-    /**
-     * Get one task by id.
-     *
-     * @param id the id of the entity
-     * @return the entity
-     */
+
     @Override
     @Transactional(readOnly = true)
     public Optional<Task> findOne(Long id) {
@@ -80,11 +63,7 @@ public class TaskServiceImpl implements TaskService {
         return taskRepository.findById(id);
     }
 
-    /**
-     * Delete the task by id.
-     *
-     * @param id the id of the entity
-     */
+
     @Override
     public void delete(Long id) {
         log.debug("Request to delete Task : {}", id);
@@ -92,13 +71,7 @@ public class TaskServiceImpl implements TaskService {
         taskSearchRepository.deleteById(id);
     }
 
-    /**
-     * Search for the task corresponding to the query.
-     *
-     * @param query the query of the search
-     * @param pageable the pagination information
-     * @return the list of entities
-     */
+
     @Override
     @Transactional(readOnly = true)
     public Page<Task> search(String query, Pageable pageable) {

@@ -41,7 +41,7 @@ public class CacheConfiguration {
             cm.createCache(com.selimozdemir.todolistapp.domain.Task.class.getName(), jcacheConfiguration);
             cm.createCache(com.selimozdemir.todolistapp.domain.Task.class.getName() + ".parents", jcacheConfiguration);
             cm.createCache(com.selimozdemir.todolistapp.domain.Task.class.getName() + ".children", jcacheConfiguration);
-            // jhipster-needle-ehcache-add-entry
+            // needle-ehcache-add-entry
         };
     }
 }

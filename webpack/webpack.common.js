@@ -100,7 +100,7 @@ module.exports = options => ({
         BUILD_TIMESTAMP: `'${new Date().getTime()}'`,
         VERSION: `'${utils.parseVersion()}'`,
         DEBUG_INFO_ENABLED: options.env === 'development',
-        // The root URL for API calls, ending with a '/' - for example: `"https://www.jhipster.tech:8081/myservice/"`.
+        // The root URL for API calls, ending with a '/' - for example: `":8081/myservice/"`.
         // If this URL is left empty (""), then it will be relative to the current context.
         // If you use an API server, in `prod` mode, you will need to enable CORS
         // (see the `jhipster.cors` common JHipster property in the `application-*.yml` configurations)
@@ -116,7 +116,7 @@ module.exports = options => ({
       { from: './src/main/webapp/static/', to: 'content' },
       { from: './src/main/webapp/favicon.ico', to: 'favicon.ico' },
       { from: './src/main/webapp/manifest.webapp', to: 'manifest.webapp' },
-      // jhipster-needle-add-assets-to-webpack - JHipster will add/remove third-party resources in this array
+      // needle-add-assets-to-webpack -  add/remove third-party resources in this array
       { from: './src/main/webapp/robots.txt', to: 'robots.txt' }
     ]),
     new HtmlWebpackPlugin({
@@ -129,7 +129,7 @@ module.exports = options => ({
         groupBy: [
                     { pattern: "./src/main/webapp/i18n/en/*.json", fileName: "./i18n/en.json" },
                     { pattern: "./src/main/webapp/i18n/tr/*.json", fileName: "./i18n/tr.json" }
-                    // jhipster-needle-i18n-language-webpack - JHipster will add/remove languages in this array
+                    // needle-i18n-language-webpack -  add/remove languages in this array
                 ]
       }
     }),

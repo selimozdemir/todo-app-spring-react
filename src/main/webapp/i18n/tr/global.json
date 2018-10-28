@@ -4,11 +4,11 @@
         "browsehappy": "<strong>Çok eski</strong> bir tarayıcı kullanıyorsunuz. Lütfen kullanım kalitenizi arttırmak için <a href=\"http://browsehappy.com/?locale=tr\">tarayıcınızı yükseltin</a>.",
         "menu": {
             "home": "Ana Sayfa",
-            "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
+            "needle-menu-add-element": " add additional menu entries here (do not translate!)",
             "entities": {
-                "main": "Varlıklar",
-                "task": "Task",
-                "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
+                "main": "Liste",
+                "task": "Görev",
+                "needle-menu-add-entry": " add additional entities here (do not translate!)"
             },
             "account": {
                 "main": "Hesap",
@@ -30,7 +30,7 @@
                 "audits": "Denetim",
                 "apidocs": "API",
                 "database": "Veritabanı",
-                "jhipster-needle-menu-add-admin-element": "JHipster will add additional menu entries here (do not translate!)"
+                "needle-menu-add-admin-element": " add additional menu entries here (do not translate!)"
             },
             "language": "Dil"
         },
@@ -49,9 +49,9 @@
         "messages": {
             "info": {
                 "authenticated": {
-                    "prefix": "",
+                    "prefix": " ",
                     "link": "Giriş",
-                    "suffix": " yapmak istiyorsanız, varsayılan hesaplardan birini deneyebilirsiniz:<br/>- Yönetici (kullanıcı adı=\"admin\" ve şifre=\"admin\") <br/>- Kullanıcı (kullanıcı adı=\"user\" and şifre=\"user\")."
+                    "suffix": " yapmak istiyorsanız, varsayılan hesaplardan birini deneyebilirsiniz:<br/> Kullanıcı (kullanıcı adı=\"user\" and şifre=\"user\")."
                 },
                 "register": {
                     "noaccount": "Henüz bir hesabınız yok mu?",
@@ -99,7 +99,11 @@
             "edit": "Düzenle",
             "open": "Aç",
             "save": "Kaydet",
-            "view": "Görüntüle"
+            "view": "Görüntüle",
+            "complete" : "Tamamla"
+        },
+        "complete": {
+            "title": "Tamamla işlemini onayla"
         },
         "detail": {
             "field": "Alan",
@@ -131,7 +135,9 @@
         "userexists": "Kullanıcı adı daha önce alınmış!",
         "emailexists": "E-posta adresi zaten kullanılıyor!",
         "idexists": "A new {{entityName}} cannot already have an ID",
-        "idnull": "Invalid ID"
+        "nameempty" : "Görev başlığı girilmelidir",
+        "deadlinenull" : "Son tarih girilmedi",
+        "idnull": "Geçersiz"
     },
     "footer": "Burası sayfa alt bilgisi"
 }

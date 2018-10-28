@@ -17,9 +17,7 @@ import java.util.Objects;
 
 import com.selimozdemir.todolistapp.domain.enumeration.Status;
 
-/**
- * Task entity.
- */
+
 @ApiModel(description = "Task entity.")
 @Entity
 @Table(name = "task")
@@ -59,7 +57,7 @@ public class Task implements Serializable {
     @OneToMany(mappedBy = "task", orphanRemoval = true, cascade = CascadeType.REMOVE)
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<Task> parents = new HashSet<>();
-    // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
+    // needle-entity-add-field -  add fields here, do not remove
     public Long getId() {
         return id;
     }
@@ -188,7 +186,7 @@ public class Task implements Serializable {
         }
 //        this.parents = tasks;
     }
-    // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
+    // needle-entity-add-getters-setters -  add getters and setters here, do not remove
 
     @Override
     public boolean equals(Object o) {

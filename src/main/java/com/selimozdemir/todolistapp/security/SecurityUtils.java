@@ -6,19 +6,13 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Optional;
 
-/**
- * Utility class for Spring Security.
- */
+
 public final class SecurityUtils {
 
     private SecurityUtils() {
     }
 
-    /**
-     * Get the login of the current user.
-     *
-     * @return the login of the current user
-     */
+
     public static Optional<String> getCurrentUserLogin() {
         SecurityContext securityContext = SecurityContextHolder.getContext();
         return Optional.ofNullable(securityContext.getAuthentication())
@@ -33,11 +27,7 @@ public final class SecurityUtils {
             });
     }
 
-    /**
-     * Get the JWT of the current user.
-     *
-     * @return the JWT of the current user
-     */
+
     public static Optional<String> getCurrentUserJWT() {
         SecurityContext securityContext = SecurityContextHolder.getContext();
         return Optional.ofNullable(securityContext.getAuthentication())
@@ -45,11 +35,7 @@ public final class SecurityUtils {
             .map(authentication -> (String) authentication.getCredentials());
     }
 
-    /**
-     * Check if a user is authenticated.
-     *
-     * @return true if the user is authenticated, false otherwise
-     */
+
     public static boolean isAuthenticated() {
         SecurityContext securityContext = SecurityContextHolder.getContext();
         return Optional.ofNullable(securityContext.getAuthentication())
@@ -58,14 +44,7 @@ public final class SecurityUtils {
             .orElse(false);
     }
 
-    /**
-     * If the current user has a specific authority (security role).
-     * <p>
-     * The name of this method comes from the isUserInRole() method in the Servlet API
-     *
-     * @param authority the authority to check
-     * @return true if the current user has the authority, false otherwise
-     */
+
     public static boolean isCurrentUserInRole(String authority) {
         SecurityContext securityContext = SecurityContextHolder.getContext();
         return Optional.ofNullable(securityContext.getAuthentication())

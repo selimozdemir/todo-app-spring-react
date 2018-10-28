@@ -32,9 +32,7 @@ import java.util.*;
 
 import static java.net.URLDecoder.decode;
 
-/**
- * Configuration of web application with Servlet 3.0 APIs.
- */
+
 @Configuration
 public class WebConfigurer implements ServletContextInitializer, WebServerFactoryCustomizer<WebServerFactory> {
 
@@ -68,21 +66,14 @@ public class WebConfigurer implements ServletContextInitializer, WebServerFactor
         log.info("Web application fully configured");
     }
 
-    /**
-     * Customize the Servlet engine: Mime types, the document root, the cache.
-     */
+
     @Override
     public void customize(WebServerFactory server) {
         setMimeMappings(server);
         // When running in an IDE or with ./mvnw spring-boot:run, set location of the static web assets.
         setLocationForStaticAssets(server);
 
-        /*
-         * Enable HTTP/2 for Undertow - https://twitter.com/ankinson/status/829256167700492288
-         * HTTP/2 requires HTTPS, so HTTP requests will fallback to HTTP/1.1.
-         * See the JHipsterProperties class and your application-*.yml configuration files
-         * for more information.
-         */
+
         if (jHipsterProperties.getHttp().getVersion().equals(JHipsterProperties.Http.Version.V_2_0) &&
             server instanceof UndertowServletWebServerFactory) {
 
@@ -116,15 +107,13 @@ public class WebConfigurer implements ServletContextInitializer, WebServerFactor
         }
     }
 
-    /**
-     * Resolve path prefix to static resources.
-     */
+
     private String resolvePathPrefix() {
         String fullExecutablePath;
         try {
             fullExecutablePath = decode(this.getClass().getResource("").getPath(), StandardCharsets.UTF_8.name());
         } catch (UnsupportedEncodingException e) {
-            /* try without decoding if this ever happens */
+
             fullExecutablePath = this.getClass().getResource("").getPath();
         }
         String rootPath = Paths.get(".").toUri().normalize().getPath();
@@ -136,9 +125,7 @@ public class WebConfigurer implements ServletContextInitializer, WebServerFactor
         return extractedPath.substring(0, extractionEndIndex);
     }
 
-    /**
-     * Initializes the caching HTTP Headers Filter.
-     */
+
     private void initCachingHttpHeadersFilter(ServletContext servletContext,
                                               EnumSet<DispatcherType> disps) {
         log.debug("Registering Caching HTTP Headers Filter");

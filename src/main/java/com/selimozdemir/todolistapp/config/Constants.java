@@ -1,8 +1,6 @@
 package com.selimozdemir.todolistapp.config;
 
-/**
- * Application constants.
- */
+
 public final class Constants {
 
     // Regex for acceptable logins

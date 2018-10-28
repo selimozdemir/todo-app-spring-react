@@ -12,7 +12,7 @@
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="manifest" href="manifest.webapp" />
     <link rel="stylesheet" href="static/css/loading.css">
-    <!-- jhipster-needle-add-resources-to-root - JHipster will add new resources here -->
+    <!-- needle-add-resources-to-root - will add new resources here -->
 </head>
 <body>
     <!--[if lt IE 9]>
@@ -31,22 +31,6 @@
             <div id="app-error" style="display:none">
                 <!-- This content is for troubleshooting purpose and will be reomved when app renders -->
                 <h1>An error has occured :-(</h1>
-                <h2>Usual error causes</h2>
-                <ol>
-                    <li>You started the application from an IDE and you didn't run <code style="color:red">npm start</code> or <code style="color:red">npm run webpack:build</code>.</li>
-                    <li>You had a network error while running <code style="color:red">npm install</code>. If you are behind a corporate proxy, it is likely that this error was caused by your proxy. Have a look at the JHipster error logs, you will probably have the cause of the error.</li>
-                    <li>You installed a Node.js version that doesn't work with JHipster: please use an LTS (long-term support) version, as it's the only version we support.</li>
-                </ol>
-                <h2>Building the client side code again</h2>
-                <p>If you want to go fast, run <code style="color:red">./mvnw</code> to build and run everything.</p>
-                <p>If you want to have more control, so you can debug your issue more easily, you should follow the following steps:</p>
-                <ol>
-                    <li>Install npm dependencies with the command <code style="color:red">npm install</code></li>
-                    <li>Build the client with the command <code style="color:red">npm run webpack:build</code> or <code style="color:red">npm start</code></li>
-                    <li>Start the server with <code style="color:red">./mvnw</code> or using your IDE</li>
-                </ol>
-
-                <h2>Getting more help</h2>
 
                 <!-- end of troubleshooting content -->
             </div>
@@ -60,7 +44,10 @@
             setTimeout(showError, 4000);
         }
         function showError() {
-            document.getElementById("app-error").style.display="block";
+            myObject = document.getElementById("app-error");
+            if (typeof myObject != "undefined") {
+                document.getElementById("app-error").style.display = "block";
+            }
         }
     </script>
 

@@ -4,8 +4,8 @@
 # This configuration will be overridden by the Spring profile you use,
 # for example application-dev.yml if you use the "dev" profile.
 #
-# More information on profiles: https://www.jhipster.tech/profiles/
-# More information on configuration properties: https://www.jhipster.tech/common-application-properties/
+# More information on profiles: /profiles/
+# More information on configuration properties: /common-application-properties/
 # ===================================================================
 
 # ===================================================================
@@ -71,7 +71,7 @@ info:
 # ===================================================================
 # JHipster specific properties
 #
-# Full reference is available at: https://www.jhipster.tech/common-application-properties/
+# Full reference is available at: /common-application-properties/
 # ===================================================================
 
 jhipster:
@@ -107,7 +107,7 @@ jhipster:
 # to have type-safe configuration, like in the JHipsterProperties above
 #
 # More documentation is available at:
-# https://www.jhipster.tech/common-application-properties/
+# /common-application-properties/
 # ===================================================================
 
 # application:

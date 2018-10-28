@@ -19,7 +19,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { IRootState } from 'app/shared/reducers';
 import { getSearchEntities, getEntities } from './task.reducer';
-import { ITask } from 'app/shared/model/task.model';
 // tslint:disable-next-line:no-unused-variable
 import { APP_DATE_FORMAT, APP_LOCAL_DATE_FORMAT } from 'app/config/constants';
 import { ITEMS_PER_PAGE } from 'app/shared/util/pagination.constants';
@@ -166,12 +165,15 @@ export class Task extends React.Component<ITaskProps, ITaskState> {
                   <td>{task.task ? <Link to={`task/${task.task.id}`}>{task.task.name}</Link> : ''}</td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
-                      <Button tag={Link} to={`${match.url}/${task.id}/complete`} color="success" size="sm">
-                        <FontAwesomeIcon icon="check" />{' '}
+                    {task.status === 'INPROGRESS' ?
+                    <Button tag={Link} to={`${match.url}/${task.id}/complete`} color="success" size="sm">
+                      <FontAwesomeIcon icon="check" />{' '}
                         <span className="d-none d-md-inline">
-                          <Translate contentKey="entity.action.complete">Complete</Translate>
+                            <Translate contentKey="entity.action.complete">Complete</Translate>
                         </span>
-                      </Button>
+                    </Button>
+                        : null
+                    }
                       <Button tag={Link} to={`${match.url}/${task.id}`} color="info" size="sm">
                         <FontAwesomeIcon icon="eye" />{' '}
                         <span className="d-none d-md-inline">

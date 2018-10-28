@@ -48,11 +48,11 @@
                 <constraints nullable="true" />
             </column>
 
-            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
+            <!-- needle-liquibase-add-column -  add columns here, do not remove-->
         </createTable>
         <dropDefaultValue tableName="task" columnName="create_date" columnDataType="datetime"/>
         <dropDefaultValue tableName="task" columnName="deadline" columnDataType="datetime"/>
 
     </changeSet>
-    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here, do not remove-->
+    <!-- needle-liquibase-add-changeset -  add changesets here, do not remove-->
 </databaseChangeLog>

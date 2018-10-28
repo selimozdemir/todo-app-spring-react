@@ -71,7 +71,19 @@ public class TaskResource {
             throw new BadRequestAlertException("A new task cannot already have an ID", ENTITY_NAME, "idexists");
         }
 
+        if(task.getName().isEmpty()){
+            throw new BadRequestAlertException("Task name cannot be empty", ENTITY_NAME, "nameempty");
+        }
+
+        if(task.getDeadline() == null){
+            throw new BadRequestAlertException("Task deadline cannot be null", ENTITY_NAME, "deadlinenull");
+        }
+
+
+
         task.setCreateDate(Instant.now());
+
+//        Instant date = task.getDeadline();
 
         User user = userService.getUserWithAuthorities()
             .orElseThrow(() -> new InternalServerErrorException("User could not be found"));

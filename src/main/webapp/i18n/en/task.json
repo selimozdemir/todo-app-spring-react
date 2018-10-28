@@ -27,7 +27,7 @@
             "deadline": "Deadline",
             "status": "Status",
             "user": "User",
-            "task": "Task",
+            "task": "Parent Task",
             "parent": "Parent"
         }
     }

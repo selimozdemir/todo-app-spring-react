@@ -16,7 +16,7 @@ import passwordReset, { PasswordResetState } from 'app/modules/account/password-
 import task, {
   TaskState
 } from 'app/entities/task/task.reducer';
-/* jhipster-needle-add-reducer-import - JHipster will add reducer here */
+/* needle-add-reducer-import -  add reducer here */
 
 export interface IRootState {
   readonly authentication: AuthenticationState;
@@ -30,7 +30,7 @@ export interface IRootState {
   readonly password: PasswordState;
   readonly settings: SettingsState;
   readonly task: TaskState;
-  /* jhipster-needle-add-reducer-type - JHipster will add reducer type here */
+  /* needle-add-reducer-type -  add reducer type here */
   readonly loadingBar: any;
 }
 
@@ -46,7 +46,7 @@ const rootReducer = combineReducers<IRootState>({
   password,
   settings,
   task,
-  /* jhipster-needle-add-reducer-combine - JHipster will add reducer here */
+  /* needle-add-reducer-combine -  add reducer here */
   loadingBar
 });
 

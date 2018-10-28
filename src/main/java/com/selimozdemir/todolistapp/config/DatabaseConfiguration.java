@@ -31,12 +31,7 @@ public class DatabaseConfiguration {
         this.env = env;
     }
 
-    /**
-     * Open the TCP port for the H2 database, so it is available remotely.
-     *
-     * @return the H2 database TCP server
-     * @throws SQLException if the server failed to start
-     */
+
     @Bean(initMethod = "start", destroyMethod = "stop")
     @Profile(JHipsterConstants.SPRING_PROFILE_DEVELOPMENT)
     public Object h2TCPServer() throws SQLException {

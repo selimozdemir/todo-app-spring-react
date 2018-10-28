@@ -20,9 +20,7 @@ import java.util.Objects;
 import java.util.Set;
 import java.time.Instant;
 
-/**
- * A user.
- */
+
 @Entity
 @Table(name = "jhi_user")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)

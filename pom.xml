@@ -9,10 +9,10 @@
     <name>Todo List App</name>
 
     <repositories>
-        <!-- jhipster-needle-maven-repository -->
+        <!-- needle-maven-repository -->
     </repositories>
 
-    <!-- jhipster-needle-distribution-management -->
+    <!-- needle-distribution-management -->
 
     <properties>
         <!-- Build properties -->
@@ -95,7 +95,7 @@
         <sonar.surefire.reportsPath>${project.testresult.directory}/surefire-reports</sonar.surefire.reportsPath>
         <sonar.tests>${project.basedir}/src/test/</sonar.tests>
 
-        <!-- jhipster-needle-maven-property -->
+        <!-- needle-maven-property -->
     </properties>
 
     <dependencyManagement>
@@ -107,7 +107,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!-- jhipster-needle-maven-add-dependency-management -->
+            <!-- needle-maven-add-dependency-management -->
         </dependencies>
     </dependencyManagement>
 
@@ -390,7 +390,7 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-heroku-connector</artifactId>
         </dependency>
-        <!-- jhipster-needle-maven-add-dependency -->
+        <!-- needle-maven-add-dependency -->
     </dependencies>
 
     <build>
@@ -636,7 +636,7 @@
                     </container>
                 </configuration>
             </plugin>
-            <!-- jhipster-needle-maven-add-plugin -->
+            <!-- needle-maven-add-plugin -->
         </plugins>
         <pluginManagement>
             <plugins>
@@ -1138,6 +1138,6 @@
                 </plugins>
             </build>
         </profile>
-        <!-- jhipster-needle-maven-add-profile -->
+        <!-- needle-maven-add-profile -->
     </profiles>
 </project>
