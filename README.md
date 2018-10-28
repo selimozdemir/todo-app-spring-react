@@ -2,6 +2,9 @@
 This application is developed with spring rest framework and react.
 Basically, you can create, delete, edit, search and sort the task list according to the criteria you specify.
 
+## Introduction
+
+
 ## Development
 
 Before you can build this project, you must install and configure the following dependencies on your machine:
@@ -47,6 +50,19 @@ Service workers are commented by default, to enable them please uncomment the fo
 Note: workbox creates the respective service worker and dynamically generate the `service-worker.js`
 
 ## Building for production
+
+To use mysql in production mode, you can edit /application-prod.yml or give arguments when starting with java -jar.
+   spring:
+    devtools:
+        restart:
+            enabled: false
+        livereload:
+            enabled: false
+    datasource:
+        type: com.zaxxer.hikari.HikariDataSource
+        url: jdbc:mysql://localhost:3306/TodoListApp?useUnicode=true&characterEncoding=utf8&useSSL=false
+        username: root
+        password:
 
 To optimize the TodoListApp application for production, run:
 
