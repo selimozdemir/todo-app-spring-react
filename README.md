@@ -1,6 +1,6 @@
 # TodoListApp
-This application is developed with spring rest framework and react.
-Basically, you can create, delete, edit, search and sort the task list according to the criteria you specify.
+This application is developed with spring rest framework, elastic search, hibernate, react & redux libraries.
+Basically, you can create dependent tasks, delete, edit, search and sort the task list according to the criteria you specify.
 
 ## Briefly
 
