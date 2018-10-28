@@ -56,7 +56,7 @@ Note: workbox creates the respective service worker and dynamically generate the
 
 To use mysql in production mode, you can edit /application-prod.yml or give arguments when starting with java -jar.
    
-   <!---
+   ```
    spring:
     devtools:
         restart:
@@ -68,7 +68,7 @@ To use mysql in production mode, you can edit /application-prod.yml or give argu
         url: jdbc:mysql://localhost:3306/TodoListApp?useUnicode=true&characterEncoding=utf8&useSSL=false
         username: root
         password:
-    -->
+    ```
 
 To optimize the TodoListApp application for production, run:
 
