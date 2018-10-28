@@ -54,9 +54,9 @@ spring:
     liquibase:
         contexts: prod
     mail:
-        host: smtp.mailgun.org
+        host: smtp.gmail.com
         port: 587
-        username: test@mg.xenforo.web.tr
+        username: xenforoweb@gmail.com
         password: 6n1XJ3z1
         properties.mail.smtp.auth: true
         properties.mail.smtp.starttls.enable: true
