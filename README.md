@@ -1,4 +1,6 @@
 # TodoListApp
+This application is developed with spring rest framework and react.
+Basically, you can create, delete, edit, search and sort the task list according to the criteria you specify.
 
 ## Development
 
@@ -44,29 +46,12 @@ Service workers are commented by default, to enable them please uncomment the fo
 
 Note: workbox creates the respective service worker and dynamically generate the `service-worker.js`
 
-### Managing dependencies
-
-For example, to add [Leaflet][] library as a runtime dependency of your application, you would run following command:
-
-    npm install --save --save-exact leaflet
-
-To benefit from TypeScript type definitions from [DefinitelyTyped][] repository in development, you would run following command:
-
-    npm install --save-dev --save-exact @types/leaflet
-
-Then you would import the JS and CSS files specified in library's installation instructions so that [Webpack][] knows about them:
-Note: there are still few other things remaining to do for Leaflet that we won't detail here.
-
-
-
-
 ## Building for production
 
 To optimize the TodoListApp application for production, run:
 
     ./mvnw -Pprod clean package
 
-This will concatenate and minify the client CSS and JavaScript files. It will also modify `index.html` so it references these new files.
 To ensure everything worked, run:
 
     java -jar target/*.war
@@ -126,3 +111,15 @@ To achieve this, first build a docker image of your app by running:
 Then run:
 
     docker-compose -f src/main/docker/app.yml up -d
+    
+
+[Node.js]: https://nodejs.org/
+[Yarn]: https://yarnpkg.org/
+[Webpack]: https://webpack.github.io/
+[Angular CLI]: https://cli.angular.io/
+[BrowserSync]: http://www.browsersync.io/
+[Jest]: https://facebook.github.io/jest/
+[Jasmine]: http://jasmine.github.io/2.0/introduction.html
+[Protractor]: https://angular.github.io/protractor/
+[Leaflet]: http://leafletjs.com/
+[DefinitelyTyped]: http://definitelytyped.org/
