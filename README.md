@@ -6,6 +6,7 @@ Basically, you can create dependent tasks, delete, edit, search and sort the tas
 
 ## Briefly
 
+
 You can [Download][] and run the Prebuilt war file as follows:
 
     java -jar todo-list-app-0.0.1-SNAPSHOT.war
