@@ -118,7 +118,7 @@ jhipster:
                 token-validity-in-seconds-for-remember-me: 2592000
     mail: # specific JHipster mail property, for standard properties see MailProperties
         from: TodoListApp@localhost
-        base-url: https://todo-list-spring.herokuapp.com # Modify according to your server's URL
+        base-url: https://todo-list-huawei.herokuapp.com # Modify according to your server's URL
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
         jmx:
             enabled: true
