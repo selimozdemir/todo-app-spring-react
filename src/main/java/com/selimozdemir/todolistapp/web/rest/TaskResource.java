@@ -135,8 +135,15 @@ public class TaskResource {
     public ResponseEntity<List<Task>> getAllTasks(TaskCriteria criteria, Pageable pageable) {
         log.debug("REST request to get Tasks by criteria: {}", criteria);
         Page<Task> page = taskQueryService.findByCriteria(criteria, pageable);
+        orderTasks(page.getContent());
+
+
         HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/tasks");
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
+    }
+
+    private void orderTasks(List<Task> tasks){
+        tasks.forEach(task -> log.debug("Task parents for:" + task.getId() + "\nTask Parent: " + task.getTask() + "\nTask Parents : " + task.getParents()));
     }
 
     /**

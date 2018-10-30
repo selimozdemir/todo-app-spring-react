@@ -23,6 +23,76 @@ import { getSearchEntities, getEntities } from './task.reducer';
 import { APP_DATE_FORMAT, APP_LOCAL_DATE_FORMAT } from 'app/config/constants';
 import { ITEMS_PER_PAGE } from 'app/shared/util/pagination.constants';
 
+const Child = ({ task, index, match, depth }) => {
+  if (Array.isArray(task.parents)) {
+    return (
+      <React.Fragment>
+        <Template task={task} i={index} match={match} depth={depth} />
+        {task.parents.map((node, i) => {
+          return <Child task={node} key={i + index} index={i} match={match} depth={depth + 1} />;
+        })}
+      </React.Fragment>
+    );
+  }
+
+  return null;
+};
+
+const Template = ({ task, i, match, depth }) => {
+  return (
+    <tr key={`entity-${i}`}>
+      <td>
+        <Button tag={Link} to={`${match.url}/${task.id}`} color="link" size="sm">
+          {task.id}
+        </Button>
+      </td>
+      <td>{'--> '.repeat(depth) + task.name}</td>
+      <td>{task.description}</td>
+      <td>
+        <TextFormat type="date" value={task.createDate} format={APP_DATE_FORMAT} />
+      </td>
+      <td>
+        <TextFormat type="date" value={task.deadline} format={APP_DATE_FORMAT} />
+      </td>
+      <td>
+        <Translate contentKey={`todoListApp.Status.${task.status}`} />
+      </td>
+      <td>{task.user ? task.user.login : ''}</td>
+      <td>{task.task ? <Link to={`task/${task.task.id}`}>{task.task.name}</Link> : ''}</td>
+      <td className="text-right">
+        <div className="btn-group flex-btn-group-container">
+          {task.status === 'INPROGRESS' ? (
+            <Button tag={Link} to={`${match.url}/${task.id}/complete`} color="success" size="sm">
+              <FontAwesomeIcon icon="check" />{' '}
+              <span className="d-none d-md-inline">
+                <Translate contentKey="entity.action.complete">Complete</Translate>
+              </span>
+            </Button>
+          ) : null}
+          <Button tag={Link} to={`${match.url}/${task.id}`} color="info" size="sm">
+            <FontAwesomeIcon icon="eye" />{' '}
+            <span className="d-none d-md-inline">
+              <Translate contentKey="entity.action.view">View</Translate>
+            </span>
+          </Button>
+          <Button tag={Link} to={`${match.url}/${task.id}/edit`} color="primary" size="sm">
+            <FontAwesomeIcon icon="pencil-alt" />{' '}
+            <span className="d-none d-md-inline">
+              <Translate contentKey="entity.action.edit">Edit</Translate>
+            </span>
+          </Button>
+          <Button tag={Link} to={`${match.url}/${task.id}/delete`} color="danger" size="sm">
+            <FontAwesomeIcon icon="trash" />{' '}
+            <span className="d-none d-md-inline">
+              <Translate contentKey="entity.action.delete">Delete</Translate>
+            </span>
+          </Button>
+        </div>
+      </td>
+    </tr>
+  );
+};
+
 export interface ITaskProps extends StateProps, DispatchProps, RouteComponentProps<{ url: string }> {}
 
 export interface ITaskState extends IPaginationBaseState {
@@ -143,59 +213,9 @@ export class Task extends React.Component<ITaskProps, ITaskState> {
               </tr>
             </thead>
             <tbody>
-              {taskList.map((task, i) => (
-                <tr key={`entity-${i}`}>
-                  <td>
-                    <Button tag={Link} to={`${match.url}/${task.id}`} color="link" size="sm">
-                      {task.id}
-                    </Button>
-                  </td>
-                  <td>{task.name}</td>
-                  <td>{task.description}</td>
-                  <td>
-                    <TextFormat type="date" value={task.createDate} format={APP_DATE_FORMAT} />
-                  </td>
-                  <td>
-                    <TextFormat type="date" value={task.deadline} format={APP_DATE_FORMAT} />
-                  </td>
-                  <td>
-                    <Translate contentKey={`todoListApp.Status.${task.status}`} />
-                  </td>
-                  <td>{task.user ? task.user.login : ''}</td>
-                  <td>{task.task ? <Link to={`task/${task.task.id}`}>{task.task.name}</Link> : ''}</td>
-                  <td className="text-right">
-                    <div className="btn-group flex-btn-group-container">
-                    {task.status === 'INPROGRESS' ?
-                    <Button tag={Link} to={`${match.url}/${task.id}/complete`} color="success" size="sm">
-                      <FontAwesomeIcon icon="check" />{' '}
-                        <span className="d-none d-md-inline">
-                            <Translate contentKey="entity.action.complete">Complete</Translate>
-                        </span>
-                    </Button>
-                        : null
-                    }
-                      <Button tag={Link} to={`${match.url}/${task.id}`} color="info" size="sm">
-                        <FontAwesomeIcon icon="eye" />{' '}
-                        <span className="d-none d-md-inline">
-                          <Translate contentKey="entity.action.view">View</Translate>
-                        </span>
-                      </Button>
-                      <Button tag={Link} to={`${match.url}/${task.id}/edit`} color="primary" size="sm">
-                        <FontAwesomeIcon icon="pencil-alt" />{' '}
-                        <span className="d-none d-md-inline">
-                          <Translate contentKey="entity.action.edit">Edit</Translate>
-                        </span>
-                      </Button>
-                      <Button tag={Link} to={`${match.url}/${task.id}/delete`} color="danger" size="sm">
-                        <FontAwesomeIcon icon="trash" />{' '}
-                        <span className="d-none d-md-inline">
-                          <Translate contentKey="entity.action.delete">Delete</Translate>
-                        </span>
-                      </Button>
-                    </div>
-                  </td>
-                </tr>
-              ))}
+              {this.state.search
+                ? taskList.map((task, i) => <Template task={task} i={i} match={match} depth={0} />)
+                : taskList.filter(task => !task.task).map((task, i) => <Child task={task} index={i} match={match} depth={0} />)}
             </tbody>
           </Table>
         </div>

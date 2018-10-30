@@ -6,7 +6,7 @@
 /src/test/javascript/coverage/
 .yo-rc.json
 jhipster-jdl.jh
-
+.gitignore
 
 ######################
 # Node

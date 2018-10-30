@@ -54,7 +54,7 @@ public class Task implements Serializable {
     @JsonIgnoreProperties("parents")
     private Task task;
 
-    @OneToMany(mappedBy = "task", orphanRemoval = true, cascade = CascadeType.REMOVE)
+    @OneToMany(mappedBy = "task", orphanRemoval = true, cascade = CascadeType.REMOVE, fetch = FetchType.EAGER)
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<Task> parents = new HashSet<>();
     // needle-entity-add-field -  add fields here, do not remove
