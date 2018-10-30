@@ -81,7 +81,7 @@
     "no-invalid-this": [true],
     "no-magic-numbers": false,
 
-    "ter-arrow-body-style": [true],
+    "ter-arrow-body-style": [false],
     "ter-no-irregular-whitespace": [true],
     "ter-no-sparse-arrays": [true],
     "ter-func-call-spacing": [true, "never"],
@@ -188,7 +188,7 @@
     "ban-types": [true, ["Object", "Use {} instead."]],
     "no-submodule-imports": [true, "app", "uuid/v4", "@fortawesome", "lodash", "react-toastify"],
 
-    "ter-arrow-body-style": [true],
+    "ter-arrow-body-style": [false],
     "ter-no-irregular-whitespace": [true],
     "ter-no-sparse-arrays": [true],
     "ter-func-call-spacing": [true, "never"],
