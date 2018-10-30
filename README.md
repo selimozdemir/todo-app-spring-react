@@ -1,9 +1,14 @@
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 # TodoListApp
-This application is developed with spring rest framework and react.
-Basically, you can create, delete, edit, search and sort the task list according to the criteria you specify.
+This application is developed with spring rest framework, elastic search, hibernate, react & redux libraries.
+Basically, you can create dependent tasks, delete, edit, search and sort the task list according to the criteria you specify.
 
-## Introduction
+## Briefly
 
+You can [Download][] and run the Prebuilt war file as follows:
+
+    java -jar todo-list-app-0.0.1-SNAPSHOT.war
 
 ## Development
 
@@ -52,6 +57,8 @@ Note: workbox creates the respective service worker and dynamically generate the
 ## Building for production
 
 To use mysql in production mode, you can edit /application-prod.yml or give arguments when starting with java -jar.
+   
+   ```
    spring:
     devtools:
         restart:
@@ -63,6 +70,7 @@ To use mysql in production mode, you can edit /application-prod.yml or give argu
         url: jdbc:mysql://localhost:3306/TodoListApp?useUnicode=true&characterEncoding=utf8&useSSL=false
         username: root
         password:
+```
 
 To optimize the TodoListApp application for production, run:
 
@@ -128,7 +136,7 @@ Then run:
 
     docker-compose -f src/main/docker/app.yml up -d
     
-
+[Download]: https://github.com/selimozdemir/todo-app-spring-react/blob/master/prebuilt/dev/todo-list-app-0.0.1-SNAPSHOT.war
 [Node.js]: https://nodejs.org/
 [Yarn]: https://yarnpkg.org/
 [Webpack]: https://webpack.github.io/
