@@ -214,8 +214,8 @@ export class Task extends React.Component<ITaskProps, ITaskState> {
             </thead>
             <tbody>
               {this.state.search
-                ? taskList.map((task, i) => <Template task={task} i={i} match={match} depth={0} />)
-                : taskList.filter(task => !task.task).map((task, i) => <Child task={task} index={i} match={match} depth={0} />)}
+                ? taskList.map((task, i) => <Template key={i} task={task} i={i} match={match} depth={0} />)
+                : taskList.filter(task => !task.task).map((task, i) => <Child task={task} key={i} index={i} match={match} depth={0} />)}
             </tbody>
           </Table>
         </div>
