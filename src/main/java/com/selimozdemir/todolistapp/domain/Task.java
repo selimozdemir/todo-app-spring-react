@@ -8,6 +8,8 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.*;
 
+import org.hibernate.annotations.NotFound;
+import org.hibernate.annotations.NotFoundAction;
 import org.springframework.data.elasticsearch.annotations.Document;
 import java.io.Serializable;
 import java.time.Instant;
@@ -51,11 +53,13 @@ public class Task implements Serializable {
     private User user;
 
     @ManyToOne
+    @NotFound(
+        action = NotFoundAction.IGNORE)
     @JsonIgnoreProperties("parents")
     private Task task;
 
     @OneToMany(mappedBy = "task", orphanRemoval = true, cascade = CascadeType.REMOVE, fetch = FetchType.EAGER)
-    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+//    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<Task> parents = new HashSet<>();
     // needle-entity-add-field -  add fields here, do not remove
     public Long getId() {

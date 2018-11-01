@@ -46,6 +46,11 @@ public class TaskServiceImpl implements TaskService {
         return result;
     }
 
+    @Override
+    public Task update(Task task) {
+        return null;
+    }
+
 
     @Override
     @Transactional(readOnly = true)
@@ -80,7 +85,6 @@ public class TaskServiceImpl implements TaskService {
 
     @Override
     public Boolean completeTask(Long id) {
-
 
 
         Optional<Task> task = findOne(id);

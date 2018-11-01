@@ -13,6 +13,8 @@ public interface TaskService {
 
     Task save(Task task);
 
+    Task update(Task task);
+
 
     Page<Task> findAll(Pageable pageable);
 

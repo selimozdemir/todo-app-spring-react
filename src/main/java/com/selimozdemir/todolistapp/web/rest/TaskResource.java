@@ -29,6 +29,7 @@ import java.net.URISyntaxException;
 import java.time.Instant;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.stream.StreamSupport;
 
 import static org.elasticsearch.index.query.QueryBuilders.*;
@@ -117,6 +118,16 @@ public class TaskResource {
             task.setCreateDate(Instant.now());
         }
 
+        if(task.getTask() != null){
+            Optional<Task> parentTask = taskService.findOne(task.getTask().getId());
+            if(parentTask.isPresent()){
+                Task parent = parentTask.get();
+                parent.addParent(task);
+                taskService.save(parent);
+            }
+
+        }
+
         Task result = taskService.save(task);
         return ResponseEntity.ok()
             .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, task.getId().toString()))
@@ -143,6 +154,7 @@ public class TaskResource {
     }
 
     private void orderTasks(List<Task> tasks){
+
         tasks.forEach(task -> log.debug("Task parents for:" + task.getId() + "\nTask Parent: " + task.getTask() + "\nTask Parents : " + task.getParents()));
     }
 
@@ -183,7 +195,17 @@ public class TaskResource {
     @Timed
     public ResponseEntity<Void> deleteTask(@PathVariable Long id) {
         log.debug("REST request to delete Task : {}", id);
+
+        Optional<Task> task = taskService.findOne(id);
+        if(task.isPresent()){
+            Task parent = task.get().getTask();
+            if(parent != null){
+                parent.removeParent(task.get());
+            }
+            taskService.save(parent);
+        }
         taskService.delete(id);
+
         return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert(ENTITY_NAME, id.toString())).build();
     }
 
